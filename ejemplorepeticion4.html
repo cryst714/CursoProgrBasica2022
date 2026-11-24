@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='main.css'>
+    <script>
+
+//¿Qué es una función?  las funciones son pedacitos de código que mientras lo escribas para un propósito general, puedes reusarlos muchas veces.
+//La palabra function debe ir en minúscula. Las funciones tienen parámetros. Los paréntesis están ahí para declarar una función, o para ejecutarla.
+//Teóricamente, primero declaras las funciones que vas a usar en tu programa, y luego las usas."""
+ //1 es piedra, 2 es papel 3 tijera
+            
+            //CON FUNCION 
+            function aleatorio(minimo, maximo){
+                return Math.floor(Math.random()*(maximo-minimo+1) + minimo)
+            }
+            function eleccion (juagada){
+                let resultado = " "
+
+                if (juagada == 1 ) {
+                    resultado = "elegiste : 🪨🪨"
+                } else  if (juagada == 2){
+                    resultado = "elegiste : 📄📄"
+                }else 
+                if (juagada == 3){
+                    resultado = "elegiste : ✂️✂️"
+                }
+                else{
+                    resultado = "elegiste mal 😵‍💫"
+                }
+                return resultado
+            }
+
+            let jugador = 0
+            let pc = 0
+            let triunfo = 0
+            let perdidas= 0
+            let empate = 0
+            while (triunfo < 3 && perdidas < 3){
+                pc = aleatorio(1,3)
+                jugador = prompt( "EL JUGADOR debe escoger: 1 piedra, 2 papel, 3 tiejera")          
+                
+                alert("tu eliges : " + eleccion(jugador))
+                alert("pc elegi : " + eleccion(pc))
+                //combate
+                if (pc == jugador) {
+                    alert("empate");
+                    empate++;
+                } else 
+                if 
+                    ((jugador == 1 && pc == 3) || (jugador == 2 && pc == 1) ||   (jugador == 3 && pc == 2)) {
+                    alert("ganaste");
+                    triunfo++;                           
+                } 
+                else {
+                    alert("perdiste");
+                    perdidas++;
+                }
+
+            }
+            alert("ganaste : " + triunfo + " veces, perdiste : " + perdidas + " veces , empataste : " + empate + " veces")
+            //let min = 1
+            // let max = 3
+            //let pc = Math.floor(Math.random()*(max-min+1) + min)
+            //let pc = aleatorio(1,3)
+            //let pc =  3
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
