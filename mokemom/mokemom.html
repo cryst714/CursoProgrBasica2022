@@ -6,6 +6,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Page Title</title>
     <link rel='stylesheet' href='main.css'>
+    <script src="./JS2/mokemom.js"></script>
 </head>
 
 <body>
@@ -14,9 +15,14 @@
     <section id="seleccionar-mascota">
         <h2>Elige a tu mascota:</h2>
 
-        Mascotas
-        
-        <button>Seleccionar</button>
+            <label for="Hipodoge">Hipodoge</label>
+            <input type="radio" name="mascota" id="Hipodoge"/>
+            <label for="capipepo">capipepo</label>
+            <input type="radio" name="mascota" id="capipepo"/>
+            <label for="ratigueya">ratigueya</label>
+            <input type="radio" name="mascota" id="ratigueya"/>
+          
+        <button id="boton-mascota">Seleccionar</button>
 
     </section>
 
@@ -26,9 +32,9 @@
         <p> tu mascota tiene <span>3</span> de vida</p>
         <p>las mascotas del enemigo tiene <span>3</span> de vidas</p>
         <p>
-            <button>fuego 🔥</button>
-            <button>agua 💧</button>
-            <button>tierra 🌱</button>
+            <button id="boton-fuego">fuego 🔥</button>
+            <button id="boton-agua">agua 💧</button>
+            <button id="boton-tierra">tierra 🌱</button>
         </p>
     </section>
 
@@ -37,7 +43,7 @@
     </section>
 
     <section id="reiniciar">
-        <button>reiniciar</button>
+        <button id="boton-reiniciar">reiniciar</button>
 
     </section>
 
